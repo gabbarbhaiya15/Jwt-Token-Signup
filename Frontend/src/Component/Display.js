@@ -10,7 +10,7 @@ export default function Display({setlogin}){
 const navigate = useNavigate();
    const Logout = async ()=>{
     console.log("Logout");
- await axios.get('http://localhost:5000/logout',{withCredentials:true})
+ await axios.get('https://jwt-backend-q4jp.onrender.com/logout',{withCredentials:true})
  
 .then((user)=>{
 console.log("User logged out");
