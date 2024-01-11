@@ -23,7 +23,7 @@ export default function Form({setlogin}){
    useEffect(() => {
       const checkToken = async () => { console.log("cheecking token");
         try {
-          const response = await axios.get('http://localhost:5000/display',{withCredentials:true});
+          const response = await axios.get('https://jwt-backend-q4jp.onrender.com/display',{withCredentials:true});
           setlogin(response.data.user.input);
           navigate('/display');
         } catch (error) {
@@ -40,7 +40,7 @@ export default function Form({setlogin}){
     
 const collectdata =async (e) => { 
     console.log("registration started")
-    await axios.post('http://localhost:5000/register',{input,password, Email},{withCredentials:true})
+    await axios.post('https://jwt-backend-q4jp.onrender.com/register',{input,password, Email},{withCredentials:true})
     .then((res)=>{console.log("collected")})
     .catch((err)=>{console.log("GADBAD HO GYA BHAIII ")})
 }
@@ -48,7 +48,7 @@ const collectdata =async (e) => {
 // 
 const Checkdata = async () => {
     console.log("checking");
-   await axios.post('http://localhost:5000/login',{LEmail,Lpassword},{withCredentials:true})
+   await axios.post('https://jwt-backend-q4jp.onrender.com/login',{LEmail,Lpassword},{withCredentials:true})
    .then((users) => { setlogin(users.data.user);
    
     console.log(users.data.user.input);
