@@ -41,7 +41,9 @@ export default function Form({setlogin}){
 const collectdata =async (e) => { 
     console.log("registration started")
     await axios.post('https://jwt-backend-q4jp.onrender.com/register',{input,password, Email},{withCredentials:true})
-    .then((res)=>{console.log("collected")})
+    .then((res)=>{console.log("collected")
+		   window.location.reload();
+		 })
     .catch((err)=>{console.log("GADBAD HO GYA BHAIII ")})
 }
 
