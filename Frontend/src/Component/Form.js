@@ -44,7 +44,8 @@ const collectdata =async (e) => {
     .then((res)=>{console.log("collected")
 		   window.location.reload();
 		 })
-    .catch((err)=>{console.log("GADBAD HO GYA BHAIII ")})
+    .catch((err)=>{console.log("GADBAD HO GYA BHAIII ")
+		   window.location.reload();})
 }
 
 // 
