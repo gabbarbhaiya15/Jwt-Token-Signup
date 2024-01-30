@@ -19,7 +19,7 @@ app.use(express.json());
 const port =  process.env.PORT || 5000;
 app.use(bodyParser.json());
 app.use(cors({credentials: true,
-  origin: ['http://localhost:3000']
+  origin: 'https://jwt-frontend-26n8.onrender.com'
 
 }));
 app.use(cookieParser());
